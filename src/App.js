@@ -95,13 +95,18 @@ var emojiDictionary = {
   "🤬": "Face with Symbols on Mouth",
   "😈": "Smiling Face with Horns",
   "👿": "Angry Face with Horns",
-  "💀": "Skull"
+  "💀": "Skull",
+  "❤️":"Heart",
 };
 export default function App() {
   var [meaning, setMeaning] = useState("");
   function emojiInputHandler(event) {
     var userInput = event.target.value;
     var localMeaning = emojiDictionary[userInput];
+
+if(localMeaning === undefined){
+localMeaning = " EMOJI not in our database";
+}
     setMeaning(localMeaning);
     console.log(localMeaning);
   }
