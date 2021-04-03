@@ -111,6 +111,7 @@ console.log(localMeaning);
   return (
     <div className="App">
       <h1>Emoji Translator..</h1>
+<h4>Example: "😀" = Grinning Face.</h4>
       <input onChange={emojiInputHandler}></input>
     <div>Meaning:<span style = {{color:"red"}}>{meaning}</span></div>
     </div>
