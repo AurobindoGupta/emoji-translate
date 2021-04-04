@@ -96,20 +96,23 @@ var emojiDictionary = {
   "😈": "Smiling Face with Horns",
   "👿": "Angry Face with Horns",
   "💀": "Skull",
-  "❤️":"Heart",
+  "❤️": "Heart"
 };
 export default function App() {
   var [meaning, setMeaning] = useState("");
   function emojiInputHandler(event) {
     var userInput = event.target.value;
-    var localMeaning = emojiDictionary[userInput];
+    var meaning = emojiDictionary[userInput];
 
-if(localMeaning === undefined){
-localMeaning = " EMOJI not in our database";
-}
-    setMeaning(localMeaning);
-    console.log(localMeaning);
+    if (meaning === undefined) {
+      meaning = " EMOJI not in our database";
+    }
+    
+    setMeaning(meaning);
+    console.log(meaning);
+
   }
+
   return (
     <div className="App">
       <h1>Emoji Translator..</h1>
