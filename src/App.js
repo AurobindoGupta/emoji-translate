@@ -116,10 +116,10 @@ export default function App() {
   return (
     <div className="App">
       <h1>Emoji Translator..</h1>
-      <h4>Example: 😀 = Grinning Face.</h4>
+      <h4 style={{fontSize:20}}>Example: <span>😀</span> = Grinning Face.</h4>
       <input onChange={emojiInputHandler}></input>
       <div>
-        Meaning:<span style={{ color: "red" }}>{meaning}</span>
+        Meaning:<span style={{ color: "red",fontWeight: "bold"}}>{meaning}</span>
       </div>
     </div>
   );
